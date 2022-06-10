@@ -29,10 +29,12 @@ while True:
     piece = player.pieces[pieceIndex]
     x = random.randint(0, board.width - 1)
     y = random.randint(0, board.height - 1)
-    if(board._check_if_inside(piece, x, y)):
+
+    try:
         board.put(playerIndex, pieceIndex, x, y)
         print(board)
-    else:
+    except Exception as e:
+        print(e)
         print("-------IMPOSSIBLE-------")
         print(piece)
         print("x = " + str(x) + " | y = " + str(y))
