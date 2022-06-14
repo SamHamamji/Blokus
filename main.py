@@ -4,6 +4,7 @@ import Board
 import Constants
 import colorit
 import random
+from UserException import UserException
 
 
 colorit.init_colorit()
@@ -22,8 +23,9 @@ board = Board.Board([
 
 print(board)
 
+playerIndex = -1
 while True:
-    playerIndex = random.randint(0, board.num_of_players - 1)
+    playerIndex = (playerIndex+1) % 4
     player = board.players[playerIndex]
     pieceIndex = random.randint(0, len(player.pieces) - 1)
     piece = player.pieces[pieceIndex]
@@ -33,11 +35,20 @@ while True:
     try:
         board.put(playerIndex, pieceIndex, x, y)
         print(board)
-    except Exception as e:
-        print(e)
+    except UserException as e:
         print("-------IMPOSSIBLE-------")
+        print(e)
         print(piece)
         print("x = " + str(x) + " | y = " + str(y))
+        print("------------------------")
+    # except Exception as e:
+    #     print("-------IMPOSSIBLE-------")
+    #     print(e)
+    #     print(piece)
+    #     print("x = " + str(x) + " | y = " + str(y))
+    #     print("------------------------")
+    #     break
+
     input("")
 
 print(board)

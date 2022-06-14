@@ -8,4 +8,4 @@ class Player:
         self.name = name
         self.color = color
         self.pieces = pieces if (
-            pieces != None) else Constants.get_initial_pieces(color)
+            pieces != None) else Piece.get_initial_pieces(color)
