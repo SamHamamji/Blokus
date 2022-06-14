@@ -1,6 +1,5 @@
 # Blokus
-### Implementation
-of the Blokus board game in Python
+Implementation of the Blokus board game in Python
 
 ### Rules:
 https://www.ultraboardgames.com/blokus/game-rules.php
