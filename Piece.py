@@ -44,13 +44,13 @@ class Piece:
 
     def tweak(self, tweaks: list[int]):
         for tweak in tweaks:
-            if (tweak == POSSIBLE_TWEAKS.ROTATE_LEFT):
+            if (tweak == POSSIBLE_TWEAKS["ROTATE_LEFT"]):
                 self._rotateLeft()
-            elif (tweak == POSSIBLE_TWEAKS.ROTATE_RIGHT):
+            elif (tweak == POSSIBLE_TWEAKS["ROTATE_RIGHT"]):
                 self._rotate_right()
-            elif (tweak == POSSIBLE_TWEAKS.FLIP_HORIZONTAL):
+            elif (tweak == POSSIBLE_TWEAKS["FLIP_HORIZONTAL"]):
                 self._flip_horizontal()
-            elif (tweak == POSSIBLE_TWEAKS.FLIP_VERTICAL):
+            elif (tweak == POSSIBLE_TWEAKS["FLIP_VERTICAL"]):
                 self._flip_vertical()
         return self
 
