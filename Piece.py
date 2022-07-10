@@ -188,7 +188,3 @@ def get_initial_pieces(color: Color.Color):
         Piece([[False, True, False], [False, True, False],
                [True, True, True]], color)
     ]
-
-
-# red = Constants.COLOR_PACK["RED"]
-# initial_pieces = get_initial_pieces(red)
